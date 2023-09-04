@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+body {
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.back-imag {
+  width: 100%;
+  height: 30rem;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4%;
+}
+
+/* make it look decent enough */
+nav ul {
+  font-family: "Alata", sans-serif;
+  color: #FDFDFD;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 46%;
+}
+
+.one-paragraphe {
+  color: #FDFDFD;
+  font-size: 34px;
+}
+
+.div-with-border {
+  border: solid 1px;
+  border-color: #FDFDFD;
+  width: 18%;
+  margin-left: 7%;
+}
+
+.div-with-border p {
+  padding-left: 12%;
+  color: #FDFDFD;
+  font-size: 34px;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-color: #00FF00;
+  }
+
+  .back-imag {
+    width: 200%;
+    height: 30rem;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 4%;
+  }
+
+  h1 {
+    color: #FDFDFD;
+  }
+
+  .div-with-border {
+    border: solid 1px;
+    border-color: #FDFDFD;
+    width: 62%;
+    margin: auto;
+  }
+
+  .div-with-border p {
+    padding-left: 12%;
+    color: #FDFDFD;
+    font-size: 34px;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu ul li {
+    padding: 10px 0;
+    font-size: 22px;
+    color: #ededed;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+}
+.one-img-one-text {
+  position: relative;
+  display: flex;
+  width: 80%;
+  margin: 0% auto;
+}
+
+.phot-normal {
+  width: 100%;
+  position: relative;
+  bottom: 1%;
+}
+
+.text-close-imag {
+  background-color: #FDFDFD;
+  padding: 5%;
+  height: 40%;
+  position: absolute;
+  bottom: 0%;
+  left: 38%;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-color: #00FF00;
+  }
+
+  .one-img-one-text {
+    position: relative;
+    display: inline-table;
+    width: 80%;
+    margin: 0% auto;
+  }
+
+  .phot-normal {
+    width: 100%;
+    position: relative;
+    bottom: 1%;
+  }
+
+  .text-close-imag {
+    background-color: #FDFDFD;
+    padding: 5%;
+    height: 40%;
+    position: absolute;
+    bottom: 0%;
+    left: 38%;
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    background-color: #00FF00;
+  }
+
+  .attribution a {
+    color: #0000FF;
+  }
+
+  .back-imag {
+    width: 200%;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  h2 {
+    font-size: 34px;
+    color: #1b1717;
+    padding: 3%;
+  }
+
+  h3 {
+    font-size: 34px;
+    color: #1b1717;
+  }
+
+  button {
+    background-color: #FDFDFD;
+    width: 9%;
+    border: solid;
+    color: #1b1717;
+    height: 0%;
+    border-color: #1b1717;
+  }
+
+  .div-with-border {
+    border: solid 1px;
+    border-color: #FDFDFD;
+    width: 18%;
+    margin-left: 21%;
+    position: relative;
+    padding: 2%;
+  }
+
+  .div-with-border p {
+    color: #FDFDFD;
+    font-size: 14px;
+  }
+
+  .one-img-one-text {
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: 0% auto;
+  }
+
+  .phot-normal {
+    width: 243%;
+    margin-top: 3%;
+  }
+
+  .text-close-imag {
+    background-color: #FDFDFD;
+    text-overflow: ellipsis;
+  }
+
+  .text-close-imag {
+    background-color: #FDFDFD;
+    padding: 28%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .button-and-titre {
+    background-color: #FDFDFD;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    padding: 10%;
+    width: 185%;
+    margin: 0% auto;
+    z-index: 4;
+  }
+
+  .fore-first-photos {
+    display: flex;
+    justify-content: center;
+    width: 74%;
+    margin: 0% auto;
+  }
+
+  .one {
+    position: relative;
+    text-align: center;
+    width: 50%;
+  }
+
+  .first-text-img {
+    position: absolute;
+    bottom: 26%;
+    right: 44%;
+    color: #FDFDFD;
+    font-size: 34px;
+  }
+
+  .tow {
+    position: relative;
+    text-align: center;
+    width: 50%;
+  }
+
+  .second-text-img {
+    position: absolute;
+    bottom: 26%;
+    right: 44%;
+    color: #FDFDFD;
+    font-size: 34px;
+  }
+
+  .fore-seconde-photos {
+    display: flex;
+    justify-content: center;
+    width: 74%;
+    margin: 0% auto;
+  }
+
+  .reso-sosiale {
+    color: #FDFDFD;
+    margin-top: 3%;
+  }
+
+  footer {
+    background-color: #1b1717;
+    width: 208%;
+  }
+
+  .footer-lines {
+    color: #FDFDFD;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5%;
+  }
+
+  footer div ul {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+body {
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.back-imag {
+  width: 100%;
+  height: 30rem;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4%;
+}
+
+/* make it look decent enough */
+nav ul {
+  font-family: "Alata", sans-serif;
+  color: #FDFDFD;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 46%;
+}
+
+.one-paragraphe {
+  color: #FDFDFD;
+  font-size: 34px;
+}
+
+.div-with-border {
+  border: solid 1px;
+  border-color: #FDFDFD;
+  width: 18%;
+  margin-left: 7%;
+}
+
+.div-with-border p {
+  padding-left: 12%;
+  color: #FDFDFD;
+  font-size: 34px;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-color: #00FF00;
+  }
+
+  .back-imag {
+    width: 200%;
+    height: 30rem;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 4%;
+  }
+
+  h1 {
+    color: #FDFDFD;
+  }
+
+  .div-with-border {
+    border: solid 1px;
+    border-color: #FDFDFD;
+    width: 62%;
+    margin: auto;
+  }
+
+  .div-with-border p {
+    padding-left: 12%;
+    color: #FDFDFD;
+    font-size: 34px;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu ul li {
+    padding: 10px 0;
+    font-size: 22px;
+    color: #ededed;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+}
+.reso-sosiale {
+  color: #FDFDFD;
+  margin-top: 3%;
+}
+
+footer {
+  background-color: #1b1717;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-lines {
+  color: #FDFDFD;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+footer div ul {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fore-first-photos {
+  display: flex;
+  justify-content: center;
+  width: 74%;
+  margin: 0% auto;
+}
+
+.one {
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+
+.first-text-img {
+  position: absolute;
+  bottom: 26%;
+  right: 44%;
+  color: #FDFDFD;
+  font-size: 34px;
+}
+
+.tow {
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+
+.second-text-img {
+  position: absolute;
+  bottom: 26%;
+  right: 44%;
+  color: #FDFDFD;
+  font-size: 34px;
+}
+
+.fore-seconde-photos {
+  display: flex;
+  justify-content: center;
+  width: 74%;
+  margin: 0% auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.attribution a {
+  color: #0000FF;
+}
+
+h2 {
+  font-size: 34px;
+  color: #1b1717;
+  padding: 3%;
+}
+
+h3 {
+  font-size: 34px;
+  color: #1b1717;
+}
+
+button {
+  background-color: #FDFDFD;
+  width: 9%;
+  border: solid;
+  color: #1b1717;
+  height: 0%;
+  border-color: #1b1717;
+}
+
+.button-and-titre {
+  background-color: #FDFDFD;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  padding: 1%;
+  width: 80%;
+  margin: 0% auto;
+}
+
+/*# sourceMappingURL=style.css.map */

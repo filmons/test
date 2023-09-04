@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* margin: 0;
+            padding: 0; */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* padding: 20px; */
+        }
+
+        .box1 {
+            width: 100%;
+            padding: 10px;
+            /* margin: 30px; */
+            /* max-width: 600px; */
+            background-color: #f0f0f0; /* Default background color */
+            /* border: 1px solid #ccc; */
+        }
+
+        .box1:nth-child(1) {
+            background-color: #ffcccc; /* Background color for the first div */
+        }
+
+        .box1:nth-child(2) {
+            background-color: #ccffcc; /* Background color for the second div */
+        }
+
+        .box1:nth-child(3) {
+            background-color: #ccccff; /* Background color for the third div */
+        }
+
+        .box1 img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+        /*  2*/
+    
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* padding: 20px; */
+        }
+
+
+        .box3:nth-child(1) {
+            background-color: #ffcccc; /* Background color for the first div */
+        }
+
+        .box3:nth-child(2) {
+            background-color: #ccffcc; /* Background color for the second div */
+        }
+
+        .box3:nth-child(3) {
+            background-color: #ccccff; /* Background color for the third div */
+        }
+
+        .box3 img {
+            max-width: 100%;
+            height: auto;
+        }
+        /*  */
+ 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* padding: 20px; */
+        }
+
+        .box3{
+            width: 100%;
+            padding: 10px;
+            /* margin: 30px; */
+            /* max-width: 600px; */
+            background-color: #f0f0f0; /* Default background color */
+            /* border: 1px solid #ccc; */
+        }
+
+        .box3:nth-child(1) {
+            background-color: #ffcccc; /* Background color for the first div */
+        }
+
+        .box1:nth-child(2) {
+            background-color: #ccffcc; /* Background color for the second div */
+        }
+
+        .box3:nth-child(3) {
+            background-color: #ccccff; /* Background color for the third div */
+        }
+
+        .box3 img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Title Centered</h2>
+        </div>
+        <div class="box2">
+            <div class="chald">  
+                  <h6>Subheading</h6></div>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+       
+        </div>
+        <div class="box3">
+            <img src="your-image.jpg" alt="Image">
+            <p>Image Description Paragraph</p>
+        </div>
+    </div>
+</body>
+</html>
