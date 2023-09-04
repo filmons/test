@@ -3,131 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Flexbox Layout</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            /* margin: 0;
-            padding: 0; */
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            /* padding: 20px; */
-        }
-
-        .box1 {
-            width: 100%;
-            padding: 10px;
-            /* margin: 30px; */
-            /* max-width: 600px; */
-            background-color: #f0f0f0; /* Default background color */
-            /* border: 1px solid #ccc; */
-        }
-
-        .box1:nth-child(1) {
-            background-color: #ffcccc; /* Background color for the first div */
-        }
-
-        .box1:nth-child(2) {
-            background-color: #ccffcc; /* Background color for the second div */
-        }
-
-        .box1:nth-child(3) {
-            background-color: #ccccff; /* Background color for the third div */
-        }
-
-        .box1 img {
-            max-width: 100%;
-            height: auto;
-        }
-
-
-
-        /*  2*/
-    
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            /* padding: 20px; */
-        }
-
-
-        .box3:nth-child(1) {
-            background-color: #ffcccc; /* Background color for the first div */
-        }
-
-        .box3:nth-child(2) {
-            background-color: #ccffcc; /* Background color for the second div */
-        }
-
-        .box3:nth-child(3) {
-            background-color: #ccccff; /* Background color for the third div */
-        }
-
-        .box3 img {
-            max-width: 100%;
-            height: auto;
-        }
-        /*  */
- 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            /* padding: 20px; */
-        }
-
-        .box3{
-            width: 100%;
-            padding: 10px;
-            /* margin: 30px; */
-            /* max-width: 600px; */
-            background-color: #f0f0f0; /* Default background color */
-            /* border: 1px solid #ccc; */
-        }
-
-        .box3:nth-child(1) {
-            background-color: #ffcccc; /* Background color for the first div */
-        }
-
-        .box1:nth-child(2) {
-            background-color: #ccffcc; /* Background color for the second div */
-        }
-
-        .box3:nth-child(3) {
-            background-color: #ccccff; /* Background color for the third div */
-        }
-
-        .box3 img {
-            max-width: 100%;
-            height: auto;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Page Title</title>
 </head>
 <body>
-    <div class="container">
-        <div class="box1">
-            <h2>Title Centered</h2>
+    <header id="header">
+        <div class="title">Consacrez du temps a ce qui compte</div>
+        <div class="header-text">Automatisez vos feuilles d'émargement en ligne et démarquez vous de vos concurrents</div>
+        <button class="download-button" type="button">Télécharger</button>
+    </header>
+    <section class="section-1">
+        <div class="title">
+            Ce que tu vas obtenir
         </div>
-        <div class="box2">
-            <div class="chald">  
-                  <h6>Subheading</h6></div>
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-       
+        <div class="section-1-text">
+            <div class="section-1-content">
+                <div class="content-left"><span>Template dynamique:</span> <br> Un template 100% personnalisable et facile à utiliser </div>
+                <div class="content-right"><span>Groupe:</span> <br> Un groupe Facebook pour ceux qui veulent faire évoluer leur business </div>
+            </div>
         </div>
-        <div class="box3">
-            <img src="your-image.jpg" alt="Image">
-            <p>Image Description Paragraph</p>
+    </section>
+    <section class="section-2">
+        <div class="section-2-content"> 
+            <div class="sp-1">Elaboré par un développeur</div>
+            Un développeur passionné depuis plus de 10 ans d'expérience qui a pensé ce template pour te faire gagner du temps en quelques clics seulement.
         </div>
-    </div>
+        <div class="image">
+            <img src="https://media.tenor.com/Er8GuCI8O_QAAAAC/the-simpsons-excellent.gif" alt="gif excellent mister burns">
+        </div>
+    </section>
 </body>
 </html>

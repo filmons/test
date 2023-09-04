@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none; 
+}
+
+header{
+    background-color: #5F4B8B;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    flex-direction: column;
+    color: white;
+}
+
+.title{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.header-text{
+    width: 50%;
+    font-size: 20px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.download-button{
+    background-color: rgb(212, 154, 47);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.section-1{
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-1-content{
+    display: flex;
+    gap: 30px;
+}
+
+.section-1-text{
+    width: 50%;
+    margin-top: 50px;
+}
+
+span{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.section-2{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    flex-direction: column;
+    background-color: rgb(230, 227, 227);
+}
+
+.sp-1{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.section-2{
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.section-2-content{
+    width: 40%;
+}
+
+.image{
+    width: 30%;
+}
+
+.image img{
+    width: 80%;
+}
