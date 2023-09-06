@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "trackmyroof-340518": {
+      "hosting": {
+        "angular": [
+          "trackmyroof-340518"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "trackmyroof-340518"
+  }
+}

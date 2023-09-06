@@ -1,0 +1,86 @@
+<main>
+    <div id="sticky-wrapper" style="height: 60px;">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container"><a class="navbar-brand" href="/"> BLNV </a></div>
+      </nav>
+    </div>
+
+    <section class="hero-section">
+      <div class="section-overlay"></div>
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12 mt-auto mb-5 text-center"><small>BLNV Presents</small>
+            <h1 class="text-white mb-5">BLNVTerest</h1>
+            <a class="btn custom-btn smoothscroll" href="#main-section">Commencer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-wrap"><video autoplay="" loop="" muted="" class="custom-video" poster="">
+          <source src="hero.mp4" type="video/mp4"> Your browser does not support the video tag.
+        </video></div>
+      <div class="sub-overlay"></div>
+    </section>
+
+    <section id="main-section" class="contact-section section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+            <div class="services-info">
+              <h2 class="mb-4 text-white">Partagez avec BLNV.</h2>
+              <p class="text-white">
+                  Bienvenue sur BLNV, votre destination pour l'exploration de l'art visuel et de la créativité. Notre plateforme vous permet de découvrir une collection diversifiée de magnifiques images et de photographies captivantes. Que vous soyez un amateur d'art ou un artiste passionné, BLNV est l'endroit idéal pour partager, apprécier et inspirer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5 row" style="margin: 0 auto" >
+                <mat-card  class="artists-thumb example-card col-md-4" *ngFor="let tutorial of tutorials">
+                    <div class="artists-image-wrap">
+                        <img class="artists-image img-fluid" [src]="tutorial.img" alt="Tutorial Image" (click)="imgDetails(tutorial.id)">
+                    </div>
+          
+                    <div class="artists-hover">
+                          <div class="card-buttons">
+                            <button class="btn btn-danger" mat-button (click)="incrementFavori(tutorial)">LIKE {{tutorial.favori}}</button>
+                            <button class="btn btn-secondary" mat-button>SHARE</button>
+                            <a [href]="tutorial.img" download="jpg">
+                                <button mat-button >Download Image</button>
+                            </a>
+                            <button mat-button (click)="deleteItem(tutorial)">DELETE</button>
+                            <button mat-button (click)="toggleEditMode(tutorial)">EDIT</button>
+                          </div>
+          
+                          <div class="mt-4">
+                              <p> 
+                                <strong>{{ tutorial.titles }}</strong>
+                                
+                              </p>
+                              <input [(ngModel)]="updatedTitle" placeholder="Updated Title">
+                          </div>
+          
+                          <p>Lorem ipsum</p>
+          
+                          <hr>
+          
+                          <div class="mb-0">
+                            <button class="btn btn-primary">Télécharger</button>
+                            <div class="mt-4" *ngIf="tutorial.id === currentTutorial?.id">
+                                <button (click)="updateTutorial(tutorial, updatedTitle)">Update</button>
+                             </div>
+                          </div>
+                    </div>
+                    
+                  </mat-card>
+      </div>
+
+        <button (click)="showForms()">{{!addButton ? 'Add' : 'close'}}</button>
+        <div class="add-item-container" *ngIf="addButton == true">
+            <input [(ngModel)]="newItem.titles" placeholder="Title">
+            <input [(ngModel)]="newItem.img" placeholder="Image URL">
+            <button (click)="addItem()">Add Item</button>
+        </div>
+    </section>
+  </main>
